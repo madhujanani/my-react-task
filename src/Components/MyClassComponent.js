@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 
 export default class MyClassComponent extends Component {
+
     constructor() {
       super();
       this.state = {
           data: "",
-          Newdata: ""
+          Newdata: "",
+          numberClicked:0
       };
       this.update =this.update.bind(this)
       this.handleChange=this.handleChange.bind(this)
@@ -15,6 +17,7 @@ export default class MyClassComponent extends Component {
     }  
     update (){
     this.setState(prevState => ({  Newdata: prevState.data }));
+    this.setState(prevstate => ({ numberClicked: prevstate.numberClicked + 1}));  
     };
   render() {
     return (
@@ -24,6 +27,7 @@ export default class MyClassComponent extends Component {
           <button onClick={this.update }>click to update</button>          
           <h2>You are Entering.....!:  {this.state.data } </h2>  
           <h2>You Entered:  {this.state. Newdata } </h2>   
+          <h2>No of times you clicked to update data:  {this.state. numberClicked } </h2>   
       </div>
     );
   }
