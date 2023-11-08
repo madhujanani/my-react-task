@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import MyClassComponent from './Components/MyClassComponent';
+import Main123 from './Components/Main'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */} 
+    <Main123/> 
+    <MyClassComponent/>
   </React.StrictMode>
 );
 
