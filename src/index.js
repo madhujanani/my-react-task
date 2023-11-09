@@ -5,13 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MyClassComponent from './Components/MyClassComponent';
 import Main123 from './Components/Main'
+import Budget123 from './Components/BudgetClass'
+import Budgetfunction123 from './Components/BbudgetFunction'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */} 
+  <Budget123/>
+  <Budgetfunction123/>
+    {/* <App />
     <Main123/> 
-    <MyClassComponent/>
+    <MyClassComponent/>*/} 
   </React.StrictMode>
 );
 
