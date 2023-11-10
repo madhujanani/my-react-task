@@ -1,11 +1,14 @@
-import React, { useState } from "react";
-export default function CheckboxChange() {
+import React, { useState,createContext } from "react";
+import Checkboxoutput from './CheckBoxOutput';
+export const UserContext =createContext();
+
+export default function CheckboxChange(props) {
     const [hobby, setHobby] = useState({
         Hobbies: []});
     const handleChange = (e) => {      
         const { value, checked } = e.target;
         const { Hobbies } = hobby;
-              if (checked) {
+            if (checked) {
             setHobby({
                 Hobbies: [...Hobbies, value],            
             });
@@ -20,7 +23,9 @@ export default function CheckboxChange() {
     };
     return (
         <div >
+            <UserContext.Provider value={hobby.Hobbies}>
         <h3>Check box show and hide Assignment 4</h3>
+        <h1>Component checkbox--change </h1>
 <label>Sports</label> 
 <input type="checkbox" value="Sports"  onChange={handleChange } /><br></br>
 <label>Travel</label> 
@@ -29,11 +34,14 @@ export default function CheckboxChange() {
 <input type="checkbox" value="Music"  onChange={handleChange } /><br></br>
 <label>Reading</label> 
 <input type="checkbox" value="Reading"  onChange={handleChange } /><br></br>
+<Checkboxoutput/>
 <fieldset>
-<h3>My Hobbies Includes:</h3><br></br>
-{"You are interestd in !! "+hobby.Hobbies +"\n"} 
-</fieldset>                                                                                       
+{/* {"You are interestd in !! "+hobby.Hobbies +"\n"}  */}
+</fieldset>                                          
+</UserContext.Provider>                                             
 </div>                                                                                                  
     );
 }
+
+
 
