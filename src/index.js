@@ -7,13 +7,17 @@ import MyClassComponent from './Components/MyClassComponent';
 import Main123 from './Components/Main'
 import Budget123 from './Components/BudgetClass'
 import Budgetfunction123 from './Components/BbudgetFunction'
+import CheckboxChange from './Components/CheckboxChange'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <Budget123/>
-  <Budgetfunction123/>
+ 
+  <CheckboxChange/>
+  
     {/* <App />
+    <Budget123/>
+    <Budgetfunction123/>
     <Main123/> 
     <MyClassComponent/>*/} 
   </React.StrictMode>
