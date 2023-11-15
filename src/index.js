@@ -8,17 +8,21 @@ import Main123 from './Components/Main'
 import Budget123 from './Components/BudgetClass'
 import Budgetfunction123 from './Components/BbudgetFunction'
 import CheckboxChange from './Components/CheckboxChange'
+import Login from './Components/DynamicRender/Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
  
-  <CheckboxChange/>
+  <Login/>
   
-    {/* <App />
+  
+    {/*
     <Budget123/>
     <Budgetfunction123/>
+     <App />
     <Main123/> 
+    <CheckboxChange/>
     <MyClassComponent/>*/} 
   </React.StrictMode>
 );

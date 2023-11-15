@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react';
+//import DynamicRender from './Components/DynamicRenering/DynamicRender'
+import DynamicRender from './Components/DynamicRender/DynamicRender';
+ export default function App() {
+  const[user,setUser]=useState('usera')
 
-function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <DynamicRender user={user}/>
+      <button onClick={()=>setUser('usera')}>Switch to User A</button>
+      <button onClick={()=>setUser('userb')}>Switch to User B</button>
+      <button onClick={()=>setUser('userc')}>Switch to User c</button>
     </div>
   );
 }
 
-export default App;
+
+
+
+
+
+
